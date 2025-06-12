@@ -1,0 +1,22 @@
+data:
+  train_annotation: data/annotations/train_debug.json
+  val_annotation: data/annotations/val_debug.json
+  answer2idx_path: data/annotations/answer2idx.json
+  image_dir: data/images
+  max_question_length: 30
+
+model:
+  hidden_dim: 512
+
+training:
+  device: cuda
+  batch_size: 16
+  num_worker: 4
+  num_epochs: 2
+  learning_rate: 0.00002
+  seed: 42
+  save_dir: checkpoints/debug
+
+debug:
+  train_samples: 1000
+  val_samples: 500
